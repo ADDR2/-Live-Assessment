@@ -1,0 +1,45 @@
+.calendar-form-wrapper {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 2rem;
+    margin-top: 10%;
+    width: 100%;    
+
+    > .calendar-form {
+        line-height: 3rem;
+        text-align: center;
+        vertical-align: middle;
+
+        > input {
+            padding: 0.5rem;
+            border: 1px solid $grey-border;
+            border-radius: .3rem;
+            text-align: center;
+            outline: none;
+            width: 20%;
+
+            &.error-input {
+                border-color: $error;
+            }
+            
+            &.success-input {
+                border-color: $success;
+            }
+        }
+
+        > button {
+            width: 10rem;
+            background-color: $green-button;
+            color: white;
+            padding: .6rem;
+            border: none;
+            border-radius: .3rem;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $darker-green-button; 
+            }
+        }
+    }
+}

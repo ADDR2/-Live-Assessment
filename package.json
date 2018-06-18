@@ -1,0 +1,46 @@
+{
+  "name": "live_assessment",
+  "version": "0.5.0",
+  "description": "Simple react app",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=test karma start",
+    "build": "webpack",
+    "start": "npm run build && node server.js"
+  },
+  "author": "Amaro Duarte",
+  "license": "MIT",
+  "babel": {
+    "presets": [
+      "env",
+      "react",
+      "stage-0"
+    ]
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "css-loader": "^0.28.11",
+    "express": "^4.16.3",
+    "node-sass": "^4.9.0",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.0",
+    "redux-thunk": "^2.3.0",
+    "sass-loader": "^7.0.3",
+    "script-loader": "^0.7.2",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.12.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.4.5",
+    "webpack-cli": "^3.0.4"
+  }
+}
