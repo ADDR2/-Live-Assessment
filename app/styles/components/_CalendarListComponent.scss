@@ -1,0 +1,7 @@
+.calendar-list-wrapper {
+    @include wrapper();
+}
+
+.alert {
+    @include alert(1rem, 10%, 80%);
+}

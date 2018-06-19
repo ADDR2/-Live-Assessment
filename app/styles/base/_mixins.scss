@@ -1,0 +1,18 @@
+@mixin wrapper() {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 2rem;
+    margin-top: 10%;
+    width: 100%;
+}
+
+@mixin alert($padding, $marginTop, $width) {
+    padding: $padding;
+    background-color: $error;
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: $marginTop;
+    width: $width;
+}

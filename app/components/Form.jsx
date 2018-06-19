@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
-import { Link } from "react-router-dom";
 
 import { updateForm } from 'FormReducer';
 import Validator from 'Validator';
@@ -33,7 +32,7 @@ export class Form extends Component {
 
 	render() {
 
-		const { startDate, days, code, updateForm, error } = this.props;
+		const { startDate, days, code, error } = this.props;
 		const { validDate, validDays, validCode } = Validator;
 
 		return (
@@ -42,7 +41,7 @@ export class Form extends Component {
 				<form onSubmit={this.onSubmit} className="calendar-form">
 					<input
 						type="text"
-						placeholder="02/02/2018"
+						placeholder="Start Date (dd/mm/yyyy)"
 						onInput={this.onInput.bind(this, 'startDate')}
 						value={startDate || ""}
 						className={ startDate === undefined? '': (validDate(startDate)? 'success-input': 'error-input') }
@@ -50,6 +49,7 @@ export class Form extends Component {
 					<br/>
 					<input
 						type="number"
+						placeholder="Days"
 						min="0"
 						onInput={this.onInput.bind(this, 'days')}
 						value={days || ""}
@@ -58,6 +58,7 @@ export class Form extends Component {
 					<br/>
 					<input
 						type="text"
+						placeholder="Country Code"
 						onInput={this.onInput.bind(this, 'code')}
 						value={code || ""}
 						className={ code === undefined? '': (validCode(code)? 'success-input': 'error-input') }
@@ -66,7 +67,7 @@ export class Form extends Component {
 					<button type="submit">Submit</button>
 					<br/>
 				</form>
-				{ error && <span>{ error }</span> }
+				{ error && <div className="calendar-form-alert">{ error }</div> }
 			</div>
 		);
 	}

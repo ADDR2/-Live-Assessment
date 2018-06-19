@@ -1,0 +1,16 @@
+.calendar-month {
+    margin: 2rem;
+
+    > .week-days {
+        margin: 0 auto;
+
+        > tbody .month-header > td {
+            padding: 0 .7rem;
+        }
+
+        .month-name {
+            background-color: $month-name-background;
+        }
+    }
+
+}
